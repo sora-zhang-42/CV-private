@@ -37,21 +37,6 @@ source(file=here("R","Untitled.R"))
 
 ```
 
-# Employment
-
-```{r}
-
-work %>%
-  detailed_entries(
-    with = title,
-    what = unit,
-    why = detail,
-    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
-    where = where
-  )
-
-```
-
 # Education
 
 ```{r EDUCATION}
@@ -67,6 +52,7 @@ edu %>%
 
 ```
 
+
 # Skills
 
 ```{r SKILLS}
@@ -75,6 +61,52 @@ skills %>%
   detailed_entries(
     with = area,
     what = skills
+  )
+
+```
+
+
+# Projects
+
+```{r PROJECTS}
+
+projects %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
+  )
+
+```
+
+# Employment Experiences
+
+```{r}
+
+work %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+# Community Involvement
+
+```{r WORKS}
+
+works %>%
+  detailed_entries(
+    with = area,
+    what = accomplishment,
+    why = detail,
+    when = year,
+    where = where
   )
 
 ```
@@ -94,45 +126,14 @@ honors %>%
 
 ```
 
-# Projects
-
-```{r PROJECTS}
-
-projects %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = year,
-    where = where
-  )
-
-```
-
-# Works
-
-```{r WORKS}
-
-works %>%
-  detailed_entries(
-    with = area,
-    what = accomplishment,
-    why = detail,
-    when = year,
-    where = where
-  )
-
-```
-
-
 # Certifications
 
 ```{r CERTIFICATIONS}
 
 certifications %>%
   detailed_entries(
-    with = position,
-    what = organization,
+    with = accomplishment,
+    what = area,
     why = detail,
     when = year,
     where = where
