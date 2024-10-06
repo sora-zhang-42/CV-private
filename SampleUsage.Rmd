@@ -32,7 +32,8 @@ packages <- c('vitae'     # The CV's LaTeX Template
 xfun::pkg_attach2(packages, message = FALSE)
 
 
-source(file=here("R","data.R"))
+# source(file = "/Users/a42/Desktop/job application/extended-RStudio CV/test/Untitled.R")
+source(file=here("R","Untitled.R"))
 
 ```
 
@@ -122,7 +123,7 @@ works %>%
   )
 
 ```
-# Community Involvement
+
 
 # Certifications
 
@@ -130,8 +131,8 @@ works %>%
 
 certifications %>%
   detailed_entries(
-    with = area,
-    what = accomplishment,
+    with = position,
+    what = organization,
     why = detail,
     when = year,
     where = where
