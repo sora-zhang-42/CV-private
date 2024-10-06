@@ -32,8 +32,7 @@ packages <- c('vitae'     # The CV's LaTeX Template
 xfun::pkg_attach2(packages, message = FALSE)
 
 
-# source(file = "/Users/a42/Desktop/job application/extended-RStudio CV/test/Untitled.R")
-source(file=here("R","Untitled.R"))
+source(file=here("R","data.R"))
 
 ```
 
